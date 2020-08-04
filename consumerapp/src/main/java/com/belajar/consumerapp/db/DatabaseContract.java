@@ -1,4 +1,4 @@
-package com.belajar.mynotesapp.db;
+package com.belajar.consumerapp.db;
 
 import android.net.Uri;
 import android.provider.BaseColumns;

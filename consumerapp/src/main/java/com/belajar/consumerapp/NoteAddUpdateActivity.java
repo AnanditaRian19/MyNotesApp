@@ -1,4 +1,4 @@
-package com.belajar.mynotesapp;
+package com.belajar.consumerapp;
 
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -18,19 +18,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.belajar.mynotesapp.db.NoteHelper;
-import com.belajar.mynotesapp.entity.Note;
-import com.belajar.mynotesapp.helper.MappingHelper;
+import com.belajar.consumerapp.entity.Note;
+import com.belajar.consumerapp.helper.MappingHelper;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static com.belajar.mynotesapp.db.DatabaseContract.NoteColumns.CONTENT_URI;
-import static com.belajar.mynotesapp.db.DatabaseContract.NoteColumns.DATE;
-import static com.belajar.mynotesapp.db.DatabaseContract.NoteColumns.DESCRIPTION;
-import static com.belajar.mynotesapp.db.DatabaseContract.NoteColumns.TITLE;
+import static com.belajar.consumerapp.db.DatabaseContract.NoteColumns.CONTENT_URI;
+import static com.belajar.consumerapp.db.DatabaseContract.NoteColumns.DATE;
+import static com.belajar.consumerapp.db.DatabaseContract.NoteColumns.DESCRIPTION;
+import static com.belajar.consumerapp.db.DatabaseContract.NoteColumns.TITLE;
 
 // tanggung jawab NoteAddUpdateActivity
 // Menyediakan form untuk melakukan proses input data
@@ -51,7 +50,7 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
     private boolean isEdit = false;
     private Note note;
     private int position;
-    private NoteHelper noteHelper;
+//    private NoteHelper noteHelper;
     private Uri uriWithId;
 
     public static final String EXTRA_NOTE = "extra_note";
@@ -73,8 +72,8 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
         etDescription = findViewById(R.id.etDescription);
         btnSubmit = findViewById(R.id.btnSubmit);
 
-        noteHelper = NoteHelper.getInstance(getApplicationContext());
-        noteHelper.open();
+//        noteHelper = NoteHelper.getInstance(getApplicationContext());
+//        noteHelper.open();
 
         note = getIntent().getParcelableExtra(EXTRA_NOTE);
         if (note != null) {

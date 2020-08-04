@@ -1,9 +1,9 @@
-package com.belajar.mynotesapp.helper;
+package com.belajar.consumerapp.helper;
 
 import android.database.Cursor;
 
-import com.belajar.mynotesapp.db.DatabaseContract;
-import com.belajar.mynotesapp.entity.Note;
+import com.belajar.consumerapp.db.DatabaseContract;
+import com.belajar.consumerapp.entity.Note;
 
 import java.util.ArrayList;
 

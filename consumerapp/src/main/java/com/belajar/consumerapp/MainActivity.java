@@ -1,9 +1,4 @@
-package com.belajar.mynotesapp;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.belajar.consumerapp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,11 +11,14 @@ import android.os.HandlerThread;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.belajar.mynotesapp.adapter.NoteAdapter;
-import com.belajar.mynotesapp.db.DatabaseContract;
-import com.belajar.mynotesapp.db.NoteHelper;
-import com.belajar.mynotesapp.entity.Note;
-import com.belajar.mynotesapp.helper.MappingHelper;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.belajar.consumerapp.adapter.NoteAdapter;
+import com.belajar.consumerapp.db.DatabaseContract;
+import com.belajar.consumerapp.entity.Note;
+import com.belajar.consumerapp.helper.MappingHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -40,8 +38,9 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle("Notes");
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Consumer Notes");
+        }
 
         progressBar = findViewById(R.id.progressbar);
         rvNotes = findViewById(R.id.rv_notes);
